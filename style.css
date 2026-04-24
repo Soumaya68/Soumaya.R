@@ -189,15 +189,53 @@ nav {
 
 .hero-left h1 {
   font-family: var(--font-display);
-  font-size: 2.6rem;
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.01em;
+  line-height: 1.0;
   color: var(--dark);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
+  animation: fadeSlideUp 0.7s ease both;
+}
+
+.hero-left h1 .first-name {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--mid);
+  margin-bottom: 0.05rem;
+}
+
+.hero-left h1 .last-name {
+  display: block;
+  font-size: 4.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--olive);
+  line-height: 0.92;
 }
 
 .hero-left h1 .olive { color: var(--olive); }
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.hero-left .status-row   { animation: slideInLeft 0.5s ease both; }
+.hero-left .term-role    { animation: fadeSlideUp 0.7s 0.1s ease both; }
+.hero-left .hero-desc    { animation: fadeSlideUp 0.7s 0.2s ease both; }
+.hero-left .hero-btns    { animation: fadeSlideUp 0.7s 0.3s ease both; }
+.hero-left .hero-stats   { animation: fadeSlideUp 0.7s 0.4s ease both; }
+.hero-right              { animation: fadeIn 0.9s 0.3s ease both; }
 
 .term-role {
   display: inline-flex;
@@ -410,17 +448,19 @@ nav {
 }
 
 /* ============================================================
-   A PROPOS
+   A PROPOS — REDESIGN COMPLET
    ============================================================ */
 .about-page { min-height: calc(100vh - 54px); background: var(--bg); }
 
-.about-hero {
+/* Intro banner */
+.about-intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid var(--bg3);
+  min-height: 45vh;
 }
 
-.about-left {
+.about-intro-left {
   padding: 3.5rem 3rem;
   display: flex;
   flex-direction: column;
@@ -428,78 +468,221 @@ nav {
   border-right: 1px solid var(--bg3);
 }
 
-.eyebrow {
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--olive-mid);
-  font-family: var(--font-mono);
-  margin-bottom: 0.7rem;
-}
-
-.about-left h2 {
+.about-intro-left h2 {
   font-family: var(--font-display);
-  font-size: 2.8rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 800;
   color: var(--dark);
-  letter-spacing: -0.02em;
-  line-height: 1.08;
-  margin-bottom: 1.2rem;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+  margin-bottom: 1.3rem;
 }
 
-.about-left p {
-  font-size: 0.9rem;
+.about-intro-left h2 span {
+  color: var(--olive);
+}
+
+.about-intro-left p {
+  font-size: 0.92rem;
   color: var(--mid);
-  line-height: 1.75;
+  line-height: 1.8;
   max-width: 420px;
 }
 
-.about-right {
+.about-intro-right {
   background: var(--bg2);
   padding: 3rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.totem {
-  background: var(--bg);
-  border-radius: var(--radius);
-  padding: 1.1rem 1.3rem;
-  border-left: 3px solid var(--olive-light);
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  transition: border-color 0.2s;
-}
-
-.totem:hover { border-left-color: var(--olive); }
-
-.totem-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-sm);
-  background: var(--olive-pale);
-  display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Grille déco en fond */
+.about-intro-right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--bg3) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg3) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.5;
+}
+
+.about-quote {
+  position: relative;
+  z-index: 1;
+  max-width: 360px;
+  text-align: center;
+}
+
+.about-quote-mark {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--olive-pale);
+  line-height: 0.6;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.about-quote blockquote {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.8rem;
+}
+
+.about-quote cite {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-style: normal;
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Totems cards — grille 3 colonnes */
+.about-totems {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  background: var(--bg);
+}
+
+.totem-card {
+  background: var(--bg);
+  border: 1px solid var(--bg3);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.totem-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(74, 92, 42, 0.12);
+  border-color: var(--olive-light);
+}
+
+/* Barre colorée en haut de chaque carte */
+.totem-card::before {
+  content: '';
+  display: block;
+  height: 4px;
+  background: var(--olive-light);
+  transition: background 0.3s ease;
+}
+
+.totem-card:nth-child(2)::before { background: var(--olive-mid); }
+.totem-card:nth-child(3)::before { background: var(--olive); }
+
+.totem-card:hover::before { background: var(--olive); }
+
+/* Image de la carte */
+.totem-img-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.totem-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: saturate(0.7);
+}
+
+.totem-card:hover .totem-img-wrap img {
+  transform: scale(1.06);
+  filter: saturate(1);
+}
+
+/* Overlay sur l'image */
+.totem-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(30, 35, 24, 0.45) 100%);
+}
+
+.totem-body {
+  padding: 1.4rem 1.5rem 1.6rem;
+}
+
+.totem-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--olive-mid);
+  font-family: var(--font-mono);
+  margin-bottom: 0.4rem;
 }
 
 .totem-title {
-  font-size: 0.86rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
   color: var(--dark);
-  margin-bottom: 3px;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
 }
 
 .totem-desc {
-  font-size: 0.77rem;
+  font-size: 0.82rem;
   color: var(--muted);
-  line-height: 1.55;
+  line-height: 1.65;
+  margin-bottom: 1rem;
 }
+
+.totem-traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.totem-trait {
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 2px;
+  background: var(--olive-xpale);
+  color: var(--olive);
+  font-family: var(--font-mono);
+}
+
+/* Animation d'entrée pour les totems */
+.totem-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.totem-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.totem-card:nth-child(2) { transition-delay: 0.1s; }
+.totem-card:nth-child(3) { transition-delay: 0.2s; }
+
+/* Ancienne classe kept for compat */
+.totem { display: none; }
+.about-hero { display: none; }
+.about-left { display: none; }
+.about-right { display: none; }
 
 /* ============================================================
    COMPETENCES

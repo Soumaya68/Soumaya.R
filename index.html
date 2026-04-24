@@ -40,7 +40,10 @@
           <span class="status-txt">IUT Colmar · BUT R&amp;T · Promo 2026</span>
         </div>
 
-        <h1>Soumaya<br><span class="olive">RABAH</span></h1>
+        <h1>
+          <span class="first-name">Soumaya</span>
+          <span class="last-name">RABAH</span>
+        </h1>
 
         <div class="term-role">
           ~/cybersécurité $<span class="cursor"></span>
@@ -125,47 +128,92 @@
   ══════════════════════════════════════════ -->
   <div id="page-apropos" class="page">
     <div class="about-page">
-      <div class="about-hero">
 
-        <div class="about-left">
+      <!-- Intro banner -->
+      <div class="about-intro">
+        <div class="about-intro-left">
           <p class="eyebrow">Qui suis-je</p>
-          <h2>À propos<br>de moi</h2>
+          <h2>À propos<br><span>de moi</span></h2>
           <p>
             À 18 ans, étudiante en BUT Réseaux &amp; Télécommunications à l'IUT de Colmar,
             je me destine aux métiers d'analyste en sécurité ou de hackeur éthique.
-            Ma personnalité se structure autour de trois dimensions complémentaires.
+            Ma personnalité se structure autour de trois dimensions complémentaires
+            que j'appelle mes <strong style="color:var(--olive);font-weight:600;">totems</strong>.
           </p>
         </div>
+        <div class="about-intro-right">
+          <div class="about-quote">
+            <span class="about-quote-mark">&#8220;</span>
+            <blockquote>
+              La curiosité est le moteur de l'apprentissage continu.
+            </blockquote>
+            <cite>Soumaya RABAH &mdash; 2025</cite>
+          </div>
+        </div>
+      </div>
 
-        <div class="about-right">
-          <div class="totem">
-            <div class="totem-icon">&#127912;</div>
-            <div>
-              <div class="totem-title">Totem Artistique</div>
-              <div class="totem-desc">
-                Créative et indépendante, j'apporte originalité et authenticité à chaque projet.
-                Mon regard singulier enrichit ma façon d'aborder les problèmes techniques.
-              </div>
+      <!-- Totems en 3 cartes -->
+      <div class="about-totems">
+
+        <!-- Totem Artistique -->
+        <div class="totem-card">
+          <div class="totem-img-wrap">
+            <img src="image/image_artiste.avif" alt="Totem Artistique" onerror="this.style.background='var(--olive-pale)';this.style.display='block'" />
+          </div>
+          <div class="totem-body">
+            <div class="totem-label">Dimension 01</div>
+            <div class="totem-title">Totem Artistique</div>
+            <div class="totem-desc">
+              Créative et indépendante, j'apporte originalité et authenticité à chaque projet.
+              Mon regard singulier enrichit ma façon d'aborder les problèmes techniques
+              et me pousse à chercher des solutions inattendues.
+            </div>
+            <div class="totem-traits">
+              <span class="totem-trait">Créativité</span>
+              <span class="totem-trait">Originalité</span>
+              <span class="totem-trait">Authenticité</span>
             </div>
           </div>
-          <div class="totem">
-            <div class="totem-icon">&#129309;</div>
-            <div>
-              <div class="totem-title">Totem Social</div>
-              <div class="totem-desc">
-                Empathique et naturellement leader, j'accompagne et fédère mon entourage.
-                Mon sens de la justice et ma bienveillance guident mes collaborations.
-              </div>
+        </div>
+
+        <!-- Totem Social -->
+        <div class="totem-card">
+          <div class="totem-img-wrap">
+            <img src="image/image_social.avif" alt="Totem Social" onerror="this.style.background='var(--olive-pale)';this.style.display='block'" />
+          </div>
+          <div class="totem-body">
+            <div class="totem-label">Dimension 02</div>
+            <div class="totem-title">Totem Social</div>
+            <div class="totem-desc">
+              Empathique et naturellement leader, j'accompagne et fédère mon entourage.
+              Mon sens de la justice et ma bienveillance guident mes collaborations
+              et renforcent la cohésion des équipes dans lesquelles j'évolue.
+            </div>
+            <div class="totem-traits">
+              <span class="totem-trait">Leadership</span>
+              <span class="totem-trait">Empathie</span>
+              <span class="totem-trait">Écoute</span>
             </div>
           </div>
-          <div class="totem">
-            <div class="totem-icon">&#9881;&#65039;</div>
-            <div>
-              <div class="totem-title">Totem Réaliste</div>
-              <div class="totem-desc">
-                Organisée et perfectionniste, je privilégie l'action concrète et la précision.
-                Ma rigueur garantit la fiabilité de mes réalisations techniques.
-              </div>
+        </div>
+
+        <!-- Totem Réaliste -->
+        <div class="totem-card">
+          <div class="totem-img-wrap">
+            <img src="image/image_realiste.avif" alt="Totem Réaliste" onerror="this.style.background='var(--olive-pale)';this.style.display='block'" />
+          </div>
+          <div class="totem-body">
+            <div class="totem-label">Dimension 03</div>
+            <div class="totem-title">Totem Réaliste</div>
+            <div class="totem-desc">
+              Organisée et perfectionniste, je privilégie l'action concrète et la précision.
+              Ma rigueur garantit la fiabilité de mes réalisations techniques
+              et m'aide à transformer les idées en résultats mesurables.
+            </div>
+            <div class="totem-traits">
+              <span class="totem-trait">Rigueur</span>
+              <span class="totem-trait">Organisation</span>
+              <span class="totem-trait">Méthode</span>
             </div>
           </div>
         </div>
@@ -593,6 +641,14 @@
       if (page)  page.classList.add('active');
       if (navEl) navEl.classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Déclencher les animations de la page à propos
+      if (id === 'apropos') {
+        setTimeout(() => {
+          document.querySelectorAll('.totem-card').forEach(card => {
+            card.classList.add('visible');
+          });
+        }, 80);
+      }
     }
 
     function showPeriod(id, btn) {
