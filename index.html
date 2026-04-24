@@ -129,29 +129,23 @@
   <div id="page-apropos" class="page">
     <div class="about-page">
 
-      <!-- Bandeau intro -->
+      <!-- Bandeau intro + citation -->
       <div class="about-intro">
         <div class="about-intro-left">
-          <p class="eyebrow">Qui suis-je</p>
           <h2>À propos <span>de moi</span></h2>
           <p>
             Étudiante en BUT Réseaux &amp; Télécommunications à l'IUT de Colmar,
-            je me destine aux métiers de la sécurité informatique et des réseaux.
+            je me destine aux métiers d'analyste en sécurité ou de hackeur éthique.
             Ma personnalité se structure autour de trois <strong style="color:var(--olive);font-weight:600;">totems</strong> complémentaires.
           </p>
         </div>
         <div class="about-intro-right">
-          <div class="about-stat">
-            <span class="about-stat-val">BUT R&amp;T</span>
-            <span class="about-stat-key">IUT de Colmar</span>
-          </div>
-          <div class="about-stat">
-            <span class="about-stat-val">Promo 2026</span>
-            <span class="about-stat-key">En formation</span>
-          </div>
-          <div class="about-stat">
-            <span class="about-stat-val">Cybersécurité</span>
-            <span class="about-stat-key">Objectif pro</span>
+          <div class="about-quote">
+            <span class="about-quote-mark">&#8220;</span>
+            <blockquote>
+              La curiosité est le moteur de l'apprentissage continu.
+            </blockquote>
+            <cite>Soumaya RABAH</cite>
           </div>
         </div>
       </div>
@@ -639,13 +633,21 @@
       if (page)  page.classList.add('active');
       if (navEl) navEl.classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      // Déclencher les animations de la page à propos
+
       if (id === 'apropos') {
+        // Reset
+        document.querySelectorAll('.about-intro-left h2, .about-intro-left p, .about-intro-right, .about-quote, .totem-card')
+          .forEach(el => el.classList.remove('visible'));
+        // Déclencher en cascade
         setTimeout(() => {
-          document.querySelectorAll('.totem-card').forEach(card => {
-            card.classList.add('visible');
-          });
-        }, 80);
+          document.querySelector('.about-intro-left h2')?.classList.add('visible');
+          document.querySelector('.about-intro-left p')?.classList.add('visible');
+          document.querySelector('.about-intro-right')?.classList.add('visible');
+          document.querySelector('.about-quote')?.classList.add('visible');
+        }, 60);
+        setTimeout(() => {
+          document.querySelectorAll('.totem-card').forEach(c => c.classList.add('visible'));
+        }, 200);
       }
     }
 
