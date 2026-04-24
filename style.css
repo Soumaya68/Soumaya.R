@@ -448,56 +448,58 @@ nav {
 }
 
 /* ============================================================
-   A PROPOS — TOUT EN UNE VUE
+   A PROPOS — ÉQUILIBRÉ ET AÉRÉ
    ============================================================ */
 .about-page {
   min-height: calc(100vh - 54px);
   background: var(--bg);
-  display: grid;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Bandeau intro compact */
+/* Bandeau intro */
 .about-intro {
-  padding: 1.8rem 3rem 1.4rem;
+  padding: 2.4rem 3rem 2rem;
   border-bottom: 1px solid var(--bg3);
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
   gap: 3rem;
 }
 
-.about-intro-left { flex: 1; }
+.about-intro-left { }
 
 .about-intro-left h2 {
   font-family: var(--font-display);
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: var(--dark);
   letter-spacing: -0.03em;
   line-height: 1.05;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 }
 
 .about-intro-left h2 span { color: var(--olive); }
 
 .about-intro-left p {
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   color: var(--mid);
-  line-height: 1.7;
-  max-width: 520px;
+  line-height: 1.75;
+  max-width: 560px;
 }
 
 .about-intro-right {
   display: flex;
-  align-items: center;
-  gap: 1.2rem;
+  flex-direction: column;
+  gap: 0.5rem;
   flex-shrink: 0;
 }
 
 .about-stat {
-  text-align: center;
-  padding: 0.6rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.55rem 1rem;
   background: var(--bg2);
   border-radius: var(--radius);
   border: 1px solid var(--bg3);
@@ -505,29 +507,25 @@ nav {
 
 .about-stat-val {
   font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 800;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: var(--olive);
-  line-height: 1;
+  white-space: nowrap;
 }
 
 .about-stat-key {
-  font-size: 0.63rem;
+  font-size: 0.72rem;
   color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
   font-family: var(--font-mono);
-  margin-top: 3px;
 }
 
-/* Grille des 3 totems — prend tout l'espace restant */
+/* Grille des 3 totems */
 .about-totems {
-  padding: 1.8rem 3rem 2rem;
+  padding: 2.4rem 3rem 2.4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.4rem;
-  background: var(--bg);
-  align-items: start;
+  gap: 1.6rem;
+  flex: 1;
 }
 
 .totem-card {
@@ -536,7 +534,6 @@ nav {
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  position: relative;
 }
 
 .totem-card:hover {
@@ -555,10 +552,9 @@ nav {
 .totem-card:nth-child(2)::before { background: var(--olive-mid); }
 .totem-card:nth-child(3)::before { background: var(--olive); }
 
-/* Image */
 .totem-img-wrap {
   width: 100%;
-  height: 160px;
+  height: 200px;
   overflow: hidden;
   position: relative;
 }
@@ -580,12 +576,11 @@ nav {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 45%, rgba(30,35,24,0.4) 100%);
+  background: linear-gradient(to bottom, transparent 45%, rgba(30,35,24,0.35) 100%);
 }
 
-/* Corps de la carte */
 .totem-body {
-  padding: 1.1rem 1.3rem 1.3rem;
+  padding: 1.2rem 1.4rem 1.5rem;
 }
 
 .totem-label {
@@ -599,17 +594,17 @@ nav {
 
 .totem-title {
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 700;
   color: var(--dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.55rem;
   letter-spacing: -0.01em;
 }
 
 .totem-desc {
-  font-size: 0.79rem;
+  font-size: 0.8rem;
   color: var(--muted);
-  line-height: 1.62;
+  line-height: 1.65;
   margin-bottom: 0.9rem;
 }
 
@@ -648,7 +643,6 @@ nav {
 .totem-card:nth-child(2) { transition-delay: 0.08s; }
 .totem-card:nth-child(3) { transition-delay: 0.16s; }
 
-/* Compat — cache les anciens éléments */
 .totem { display: none; }
 .about-hero { display: none; }
 .about-left { display: none; }
