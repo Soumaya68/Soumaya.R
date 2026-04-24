@@ -221,119 +221,135 @@
   <div id="page-competences" class="page">
     <div class="competences-page">
 
-      <div class="page-header">
-        <p class="eyebrow">Formation BUT R&amp;T</p>
-        <h2>Compétences</h2>
-      </div>
-
-      <div class="skills-grid">
-
-        <div class="skill-block">
-          <img src="image/serveur.avif" alt="Serveurs réseau" class="skill-img" onerror="this.style.display='none'" />
-          <div class="skill-num">01</div>
-          <div class="skill-name">Administrer</div>
-          <div class="skill-desc">
-            Configuration de routeurs, switches et serveurs. Attribution d'adresses IP,
-            services DHCP, protocoles RIP/OSPF. Administration Windows, Linux et
-            aperçu d'Active Directory.
-          </div>
-          <div class="skill-tags">
-            <span class="tag">Cisco IOS</span>
-            <span class="tag">IP / DHCP / DNS</span>
-            <span class="tag">RIP / OSPF</span>
-            <span class="tag">Windows 10</span>
-            <span class="tag">Debian</span>
-            <span class="tag neutral">Active Directory</span>
-            <span class="tag neutral">GNS3</span>
-          </div>
+      <!-- Header -->
+      <div class="comp-header">
+        <div class="comp-header-left">
+          <p class="eyebrow">Formation BUT R&amp;T</p>
+          <h2>Mes <span class="comp-title-accent">compétences</span></h2>
+          <p class="comp-subtitle">Ma formation en BUT R&T s'articule autour de trois grandes compétences complémentaires : administrer des infrastructures réseau, connecter des systèmes de télécommunication, et programmer des solutions d'automatisation. Chacune forge un profil technique polyvalent, orienté vers la cybersécurité.</p>
         </div>
-
-        <div class="skill-block">
-          <img src="image/telecommunication.jpg" alt="Télécommunications" class="skill-img" onerror="this.style.display='none'" />
-          <div class="skill-num">02</div>
-          <div class="skill-name">Connecter</div>
-          <div class="skill-desc">
-            Électronique, chaînes de transmission du signal, fibre optique et
-            réseaux d'accès. Fondements théoriques en mathématiques et physique
-            appliquées aux télécoms.
-          </div>
-          <div class="skill-tags">
-            <span class="tag">Fibre optique</span>
-            <span class="tag">Transmission signal</span>
-            <span class="tag">VoIP / SIP</span>
-            <span class="tag neutral">Électronique</span>
-            <span class="tag neutral">SolidWorks</span>
-            <span class="tag neutral">Linphone</span>
-          </div>
-        </div>
-
-        <div class="skill-block">
-          <img src="image/developpement.avif" alt="Développement" class="skill-img" onerror="this.style.display='none'" />
-          <div class="skill-num">03</div>
-          <div class="skill-name">Programmer</div>
-          <div class="skill-desc">
-            Bases solides en HTML/CSS et algorithmique. Scripts Python pour l'analyse
-            de données réseau. Automatisation de tâches avec Bash et PowerShell.
-          </div>
-          <div class="skill-tags">
-            <span class="tag">HTML / CSS</span>
-            <span class="tag">Python</span>
-            <span class="tag">Bash</span>
-            <span class="tag">PowerShell</span>
-            <span class="tag neutral">Algorithmique</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="soft-section">
-        <div class="soft-title">Compétences interpersonnelles</div>
-        <div class="soft-grid">
-          <div class="soft-card">
-            <div class="soft-icon">&#128161;</div>
-            <div class="soft-name">Esprit curieux</div>
-            <div class="soft-sub">Toujours en quête d'apprendre</div>
-          </div>
-          <div class="soft-card">
-            <div class="soft-icon">&#128260;</div>
-            <div class="soft-name">Adaptabilité</div>
-            <div class="soft-sub">À l'aise dans tout contexte</div>
-          </div>
-          <div class="soft-card">
-            <div class="soft-icon">&#129309;</div>
-            <div class="soft-name">Aisance relationnelle</div>
-            <div class="soft-sub">Naturellement à l'écoute</div>
-          </div>
-          <div class="soft-card">
-            <div class="soft-icon">&#127919;</div>
-            <div class="soft-name">Rigueur</div>
-            <div class="soft-sub">Méthode et précision</div>
-          </div>
-          <div class="soft-card">
-            <div class="soft-icon">&#128172;</div>
-            <div class="soft-name">Communication</div>
-            <div class="soft-sub">Claire et efficace</div>
-          </div>
-          <div class="soft-card">
-            <div class="soft-icon">&#128293;</div>
-            <div class="soft-name">Détermination</div>
-            <div class="soft-sub">Engagée jusqu'au bout</div>
+        <div class="comp-header-right">
+          <div class="mini-term">
+            <div class="mini-term-bar">
+              <span class="tdot" style="background:#e06060;"></span>
+              <span class="tdot" style="background:#e0c060;"></span>
+              <span class="tdot" style="background:#60b040;"></span>
+              <span class="mini-term-title">skills.sh</span>
+            </div>
+            <div class="mini-term-body">
+              <div><span class="tc">❯ ./scan-skills.sh</span></div>
+              <div class="to">Analyse en cours...</div>
+              <div class="to">[<span class="bar-anim" id="bar1"></span>] Administrer</div>
+              <div class="to">[<span class="bar-anim" id="bar2"></span>] Connecter</div>
+              <div class="to">[<span class="bar-anim" id="bar3"></span>] Programmer</div>
+              <div class="tw">3 modules chargés ✓</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="tools-bar">
-        <span class="tools-label">Outils</span>
-        <div class="tools-list">
-          <span class="tool-pill">Wireshark</span>
-          <span class="tool-pill">Packet Tracer</span>
-          <span class="tool-pill">GNS3</span>
-          <span class="tool-pill">VirtualBox</span>
-          <span class="tool-pill">VMware</span>
-          <span class="tool-pill">Kali Linux</span>
-          <span class="tool-pill">SolidWorks</span>
-          <span class="tool-pill">Pack Office</span>
-          <span class="tool-pill">Linphone</span>
+      <!-- 3 blocs alternés -->
+      <div class="comp-hard">
+
+        <!-- 01 Administrer -->
+        <div class="comp-block comp-adm comp-reveal" data-delay="0">
+          <div class="comp-block-img">
+            <img src="image/serveur.avif" alt="Administrer" onerror="this.style.display='none'" />
+            <div class="comp-block-num">01</div>
+            <div class="comp-block-color-bar"></div>
+          </div>
+          <div class="comp-block-body">
+            <div class="comp-block-tag">Réseaux &amp; Systèmes</div>
+            <h3 class="comp-block-title">Administrer</h3>
+            <p class="comp-block-desc">Configuration de routeurs, switches et serveurs. Attribution d'adresses IP, services DHCP, protocoles réseau. Administration Windows &amp; Linux, aperçu d'Active Directory.</p>
+            <div class="scan-list">
+              <div class="scan-item"><span class="scan-check">✓</span> Cisco IOS</div>
+              <div class="scan-item"><span class="scan-check">✓</span> IP / DHCP / DNS</div>
+              <div class="scan-item"><span class="scan-check">✓</span> Protocoles réseau</div>
+              <div class="scan-item"><span class="scan-check">✓</span> Windows / Linux</div>
+              <div class="scan-item"><span class="scan-check">✓</span> Wireshark / GNS3</div>
+              <div class="scan-item"><span class="scan-check">✓</span> Active Directory</div>
+            </div>
+            <div class="comp-certs">
+              <span class="comp-cert-badge adm-cert">🏆 Certification CCNA — Cisco Packet Tracer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 Connecter -->
+        <div class="comp-block comp-block-reverse comp-con comp-reveal" data-delay="100">
+          <div class="comp-block-img">
+            <img src="image/telecommunication.jpg" alt="Connecter" onerror="this.style.display='none'" />
+            <div class="comp-block-num">02</div>
+            <div class="comp-block-color-bar"></div>
+          </div>
+          <div class="comp-block-body">
+            <div class="comp-block-tag">Télécommunications</div>
+            <h3 class="comp-block-title">Connecter</h3>
+            <p class="comp-block-desc">Électronique, chaînes de transmission du signal, fibre optique et réseaux d'accès. Fondements théoriques en mathématiques et physique appliquées aux télécoms.</p>
+            <div class="scan-list">
+              <div class="scan-item"><span class="scan-check">✓</span> Fibre optique</div>
+              <div class="scan-item"><span class="scan-check">✓</span> Transmission signal</div>
+              <div class="scan-item"><span class="scan-check">✓</span> VoIP / SIP</div>
+              <div class="scan-item"><span class="scan-check">✓</span> Réseaux d'accès</div>
+              <div class="scan-item"><span class="scan-check">✓</span> Électronique</div>
+              <div class="scan-item"><span class="scan-check">✓</span> SolidWorks</div>
+            </div>
+            <div class="comp-certs">
+              <span class="comp-cert-badge con-cert">🏆 Certification Linphone</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 Programmer -->
+        <div class="comp-block comp-prg comp-reveal" data-delay="200">
+          <div class="comp-block-img">
+            <img src="image/developpement.avif" alt="Programmer" onerror="this.style.display='none'" />
+            <div class="comp-block-num">03</div>
+            <div class="comp-block-color-bar"></div>
+          </div>
+          <div class="comp-block-body">
+            <div class="comp-block-tag">Développement &amp; Scripting</div>
+            <h3 class="comp-block-title">Programmer</h3>
+            <p class="comp-block-desc">Bases solides en HTML/CSS et algorithmique. Scripts Python pour l'analyse de données réseau. Automatisation de tâches avec Bash et PowerShell.</p>
+            <div class="scan-list">
+              <div class="scan-item"><span class="scan-check">✓</span> HTML / CSS</div>
+              <div class="scan-item"><span class="scan-check">✓</span> Python</div>
+              <div class="scan-item"><span class="scan-check">✓</span> Bash</div>
+              <div class="scan-item"><span class="scan-check">✓</span> PowerShell</div>
+              <div class="scan-item"><span class="scan-check">✓</span> Algorithmique</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bas : soft skills + outils -->
+      <div class="comp-bottom-new">
+        <div class="soft-section-new">
+          <div class="comp-section-label">// soft_skills</div>
+          <div class="soft-bubbles">
+            <div class="bubble b1">💡 Esprit curieux</div>
+            <div class="bubble b2">🔄 Adaptabilité</div>
+            <div class="bubble b3">🤝 Aisance relationnelle</div>
+            <div class="bubble b4">🎯 Rigueur</div>
+            <div class="bubble b5">💬 Communication</div>
+            <div class="bubble b6">🔥 Détermination</div>
+          </div>
+        </div>
+        <div class="tools-section-new">
+          <div class="comp-section-label">// tools.config</div>
+          <div class="tools-flow">
+            <span class="tf">Wireshark</span>
+            <span class="tf">Packet Tracer</span>
+            <span class="tf">GNS3</span>
+            <span class="tf">VirtualBox</span>
+            <span class="tf">VMware</span>
+            <span class="tf">Kali Linux</span>
+            <span class="tf">SolidWorks</span>
+            <span class="tf">Pack Office</span>
+            <span class="tf">Linphone</span>
+          </div>
         </div>
       </div>
 
@@ -635,10 +651,8 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
       if (id === 'apropos') {
-        // Reset
         document.querySelectorAll('.about-intro-left h2, .about-intro-left p, .about-intro-right, .about-quote, .totem-card')
           .forEach(el => el.classList.remove('visible'));
-        // Déclencher en cascade
         setTimeout(() => {
           document.querySelector('.about-intro-left h2')?.classList.add('visible');
           document.querySelector('.about-intro-left p')?.classList.add('visible');
@@ -648,6 +662,37 @@
         setTimeout(() => {
           document.querySelectorAll('.totem-card').forEach(c => c.classList.add('visible'));
         }, 200);
+      }
+
+      if (id === 'competences') {
+        // Reset tout
+        document.querySelectorAll('.comp-reveal').forEach(el => el.classList.remove('visible'));
+        document.querySelectorAll('.scan-item').forEach(el => el.classList.remove('visible'));
+        document.querySelectorAll('.bar-anim').forEach(b => { b.textContent = ''; b.classList.remove('loaded'); });
+
+        // 1. Terminal — barres qui se remplissent
+        const termContent = ['████████████████░░░░', '█████████████░░░░░░░', '████████████████████'];
+        ['bar1','bar2','bar3'].forEach((bid, i) => {
+          setTimeout(() => {
+            const el = document.getElementById(bid);
+            if (el) { el.textContent = termContent[i]; el.classList.add('loaded'); }
+          }, 300 + i * 350);
+        });
+
+        // 2. Blocs principaux glissent vers le haut
+        setTimeout(() => {
+          document.querySelectorAll('.comp-reveal').forEach((el) => {
+            const delay = parseInt(el.dataset.delay || 0);
+            setTimeout(() => el.classList.add('visible'), delay);
+          });
+        }, 100);
+
+        // 3. Scan items apparaissent en cascade (après les blocs)
+        setTimeout(() => {
+          document.querySelectorAll('.scan-item').forEach((item, i) => {
+            setTimeout(() => item.classList.add('visible'), i * 60);
+          });
+        }, 600);
       }
     }
 
