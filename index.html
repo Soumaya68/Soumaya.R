@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soumaya RABAH — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav>
+    <a class="logo" onclick="showPage('accueil')">
+      soumaya<span class="logo-dot"></span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a onclick="showPage('accueil')"      class="active" id="nav-accueil">Accueil</a>
+      <a onclick="showPage('apropos')"      id="nav-apropos">À propos</a>
+      <a onclick="showPage('competences')"  id="nav-competences">Compétences</a>
+      <a onclick="showPage('projets')"      id="nav-projets">Projets</a>
+      <a onclick="showPage('experiences')"  id="nav-experiences">Expériences</a>
+      <a onclick="showPage('contact')"      id="nav-contact">Contact</a>
+    </div>
+    <span class="nav-badge">Ouverte aux opportunités</span>
+    <button class="nav-mobile-btn" id="mobile-btn" aria-label="Menu">&#9776;</button>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE — ACCUEIL
+  ══════════════════════════════════════════ -->
+  <div id="page-accueil" class="page active">
+    <section class="hero">
+
+      <div class="hero-left">
+        <div class="status-row">
+          <span class="status-dot"></span>
+          <span class="status-txt">IUT Colmar · BUT R&amp;T · Promo 2026</span>
+        </div>
+
+        <h1>Soumaya<br><span class="olive">RABAH</span></h1>
+
+        <div class="term-role">
+          ~/cybersécurité $<span class="cursor"></span>
+        </div>
+
+        <p class="hero-desc">
+          Étudiante en Réseaux &amp; Télécommunications, passionnée par la sécurité
+          des systèmes. Future analyste ou hackeur éthique.
+        </p>
+
+        <div class="hero-btns">
+          <button class="btn-main" onclick="showPage('projets')">Voir mes projets</button>
+          <button class="btn-out"  onclick="showPage('apropos')">À propos</button>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="stat-val">7+</div>
+            <div class="stat-key">Projets SAE</div>
+          </div>
+          <div>
+            <div class="stat-val">CCNA</div>
+            <div class="stat-key">Certification</div>
+          </div>
+          <div>
+            <div class="stat-val">2 mois</div>
+            <div class="stat-key">Stage ATScom</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="term-win">
+          <div class="term-top">
+            <span class="tdot" style="background:#e06060;"></span>
+            <span class="tdot" style="background:#e0c060;"></span>
+            <span class="tdot" style="background:#60b040;"></span>
+            <span class="term-label">soumaya@iut-colmar ~ zsh</span>
+          </div>
+          <div class="term-body">
+            <div><span class="tc">❯ whoami</span></div>
+            <div class="to">soumaya.rabah &mdash; étudiante R&amp;T, parcours cybersécurité</div>
+            <br>
+            <div><span class="tc">❯ cat formation.txt</span></div>
+            <div class="to">BUT Réseaux &amp; Télécommunications</div>
+            <div class="to">IUT de Colmar &middot; 2024&mdash;2026</div>
+            <br>
+            <div><span class="tc">❯ ls compétences/</span></div>
+            <div>
+              <span class="ta">administrer/</span>&nbsp;&nbsp;
+              <span class="ta">connecter/</span>&nbsp;&nbsp;
+              <span class="ta">programmer/</span>
+            </div>
+            <br>
+            <div><span class="tc">❯ cat certifications/</span></div>
+            <div class="tw">ccna_packet_tracer.cert &#10003;</div>
+            <br>
+            <div><span class="tc">❯ ping objectif-pro</span></div>
+            <div class="to">analyste-sécurité &middot; hackeur-éthique</div>
+            <div class="to">64 bytes &mdash; connexion établie <span class="tw">&#10003;</span></div>
+            <br>
+            <div class="td">❯ <span class="cursor"></span></div>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <div class="avatar">SR</div>
+          <div>
+            <div class="prof-name">Soumaya RABAH</div>
+            <div class="prof-sub">Colmar, France &middot; IUT R&amp;T</div>
+          </div>
+          <span class="badge-dispo">Disponible</span>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE — À PROPOS
+  ══════════════════════════════════════════ -->
+  <div id="page-apropos" class="page">
+    <div class="about-page">
+      <div class="about-hero">
+
+        <div class="about-left">
+          <p class="eyebrow">Qui suis-je</p>
+          <h2>À propos<br>de moi</h2>
+          <p>
+            À 18 ans, étudiante en BUT Réseaux &amp; Télécommunications à l'IUT de Colmar,
+            je me destine aux métiers d'analyste en sécurité ou de hackeur éthique.
+            Ma personnalité se structure autour de trois dimensions complémentaires.
+          </p>
+        </div>
+
+        <div class="about-right">
+          <div class="totem">
+            <div class="totem-icon">&#127912;</div>
+            <div>
+              <div class="totem-title">Totem Artistique</div>
+              <div class="totem-desc">
+                Créative et indépendante, j'apporte originalité et authenticité à chaque projet.
+                Mon regard singulier enrichit ma façon d'aborder les problèmes techniques.
+              </div>
+            </div>
+          </div>
+          <div class="totem">
+            <div class="totem-icon">&#129309;</div>
+            <div>
+              <div class="totem-title">Totem Social</div>
+              <div class="totem-desc">
+                Empathique et naturellement leader, j'accompagne et fédère mon entourage.
+                Mon sens de la justice et ma bienveillance guident mes collaborations.
+              </div>
+            </div>
+          </div>
+          <div class="totem">
+            <div class="totem-icon">&#9881;&#65039;</div>
+            <div>
+              <div class="totem-title">Totem Réaliste</div>
+              <div class="totem-desc">
+                Organisée et perfectionniste, je privilégie l'action concrète et la précision.
+                Ma rigueur garantit la fiabilité de mes réalisations techniques.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE — COMPÉTENCES
+  ══════════════════════════════════════════ -->
+  <div id="page-competences" class="page">
+    <div class="competences-page">
+
+      <div class="page-header">
+        <p class="eyebrow">Formation BUT R&amp;T</p>
+        <h2>Compétences</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-block">
+          <img src="image/serveur.avif" alt="Serveurs réseau" class="skill-img" onerror="this.style.display='none'" />
+          <div class="skill-num">01</div>
+          <div class="skill-name">Administrer</div>
+          <div class="skill-desc">
+            Configuration de routeurs, switches et serveurs. Attribution d'adresses IP,
+            services DHCP, protocoles RIP/OSPF. Administration Windows, Linux et
+            aperçu d'Active Directory.
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Cisco IOS</span>
+            <span class="tag">IP / DHCP / DNS</span>
+            <span class="tag">RIP / OSPF</span>
+            <span class="tag">Windows 10</span>
+            <span class="tag">Debian</span>
+            <span class="tag neutral">Active Directory</span>
+            <span class="tag neutral">GNS3</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <img src="image/telecommunication.jpg" alt="Télécommunications" class="skill-img" onerror="this.style.display='none'" />
+          <div class="skill-num">02</div>
+          <div class="skill-name">Connecter</div>
+          <div class="skill-desc">
+            Électronique, chaînes de transmission du signal, fibre optique et
+            réseaux d'accès. Fondements théoriques en mathématiques et physique
+            appliquées aux télécoms.
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Fibre optique</span>
+            <span class="tag">Transmission signal</span>
+            <span class="tag">VoIP / SIP</span>
+            <span class="tag neutral">Électronique</span>
+            <span class="tag neutral">SolidWorks</span>
+            <span class="tag neutral">Linphone</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <img src="image/developpement.avif" alt="Développement" class="skill-img" onerror="this.style.display='none'" />
+          <div class="skill-num">03</div>
+          <div class="skill-name">Programmer</div>
+          <div class="skill-desc">
+            Bases solides en HTML/CSS et algorithmique. Scripts Python pour l'analyse
+            de données réseau. Automatisation de tâches avec Bash et PowerShell.
+          </div>
+          <div class="skill-tags">
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">Python</span>
+            <span class="tag">Bash</span>
+            <span class="tag">PowerShell</span>
+            <span class="tag neutral">Algorithmique</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="soft-section">
+        <div class="soft-title">Compétences interpersonnelles</div>
+        <div class="soft-grid">
+          <div class="soft-card">
+            <div class="soft-icon">&#128161;</div>
+            <div class="soft-name">Esprit curieux</div>
+            <div class="soft-sub">Toujours en quête d'apprendre</div>
+          </div>
+          <div class="soft-card">
+            <div class="soft-icon">&#128260;</div>
+            <div class="soft-name">Adaptabilité</div>
+            <div class="soft-sub">À l'aise dans tout contexte</div>
+          </div>
+          <div class="soft-card">
+            <div class="soft-icon">&#129309;</div>
+            <div class="soft-name">Aisance relationnelle</div>
+            <div class="soft-sub">Naturellement à l'écoute</div>
+          </div>
+          <div class="soft-card">
+            <div class="soft-icon">&#127919;</div>
+            <div class="soft-name">Rigueur</div>
+            <div class="soft-sub">Méthode et précision</div>
+          </div>
+          <div class="soft-card">
+            <div class="soft-icon">&#128172;</div>
+            <div class="soft-name">Communication</div>
+            <div class="soft-sub">Claire et efficace</div>
+          </div>
+          <div class="soft-card">
+            <div class="soft-icon">&#128293;</div>
+            <div class="soft-name">Détermination</div>
+            <div class="soft-sub">Engagée jusqu'au bout</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tools-bar">
+        <span class="tools-label">Outils</span>
+        <div class="tools-list">
+          <span class="tool-pill">Wireshark</span>
+          <span class="tool-pill">Packet Tracer</span>
+          <span class="tool-pill">GNS3</span>
+          <span class="tool-pill">VirtualBox</span>
+          <span class="tool-pill">VMware</span>
+          <span class="tool-pill">Kali Linux</span>
+          <span class="tool-pill">SolidWorks</span>
+          <span class="tool-pill">Pack Office</span>
+          <span class="tool-pill">Linphone</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE — PROJETS
+  ══════════════════════════════════════════ -->
+  <div id="page-projets" class="page">
+    <div class="projects-page">
+
+      <div class="page-header">
+        <p class="eyebrow">Réalisations</p>
+        <h2>Projets</h2>
+      </div>
+
+      <div class="period-tabs">
+        <button class="ptab active" onclick="showPeriod('lycee', this)">Lycée</button>
+        <button class="ptab"        onclick="showPeriod('but1',  this)">1ère année BUT</button>
+        <button class="ptab"        onclick="showPeriod('but2',  this)">2ème année BUT</button>
+        <button class="ptab"        onclick="showPeriod('but3',  this)">3ème année BUT</button>
+      </div>
+
+      <div id="per-lycee" class="period-content active">
+        <div class="proj-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+          <div class="pcard" onclick="window.location='course-en-cours.html'">
+            <div class="pcard-period">Lycée</div>
+            <div class="pcard-num">00</div>
+            <div class="pcard-title">Course en Cours</div>
+            <div class="pcard-desc">Conception d'une mini-voiture de course électrique en équipe. Modélisation 3D, optimisation des performances et présentation.</div>
+            <span class="pcard-link">Voir le projet →</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="per-but1" class="period-content">
+        <div class="proj-grid">
+          <div class="pcard" onclick="window.location='sae1-01.html'">
+            <div class="pcard-period">1ère année BUT</div>
+            <div class="pcard-num">01</div>
+            <div class="pcard-title">SAE1.01 &mdash; Cybersécurité</div>
+            <div class="pcard-desc">Hygiène informatique, sensibilisation aux menaces et bonnes pratiques.</div>
+            <span class="pcard-link">Voir →</span>
+          </div>
+          <div class="pcard" onclick="window.location='sae1-02.html'">
+            <div class="pcard-period">1ère année BUT</div>
+            <div class="pcard-num">02</div>
+            <div class="pcard-title">SAE1.02 &mdash; Réseaux</div>
+            <div class="pcard-desc">Configuration LAN, adressage IP, tests de connectivité entre machines.</div>
+            <span class="pcard-link">Voir →</span>
+          </div>
+          <div class="pcard" onclick="window.location='sae1-03.html'">
+            <div class="pcard-period">1ère année BUT</div>
+            <div class="pcard-num">03</div>
+            <div class="pcard-title">SAE1.03 &mdash; Transmission</div>
+            <div class="pcard-desc">Étude d'un dispositif de transmission sans fil, mesures et optimisation.</div>
+            <span class="pcard-link">Voir →</span>
+          </div>
+          <div class="pcard" onclick="window.location='sae1-04.html'">
+            <div class="pcard-period">1ère année BUT</div>
+            <div class="pcard-num">04</div>
+            <div class="pcard-title">SAE1.04 &mdash; Web</div>
+            <div class="pcard-desc">Site web personnel HTML/CSS pour présenter mon parcours et compétences.</div>
+            <span class="pcard-link">Voir →</span>
+          </div>
+          <div class="pcard" onclick="window.location='sae1-05.html'">
+            <div class="pcard-period">1ère année BUT</div>
+            <div class="pcard-num">05</div>
+            <div class="pcard-title">SAE1.05 &mdash; Données</div>
+            <div class="pcard-desc">Script Python pour l'analyse et la visualisation de données réseau.</div>
+            <span class="pcard-link">Voir →</span>
+          </div>
+          <div class="pcard" onclick="window.location='sae2-01.html'">
+            <div class="pcard-period">1ère année BUT</div>
+            <div class="pcard-num">06</div>
+            <div class="pcard-title">SAE2.01 &mdash; Admin réseau</div>
+            <div class="pcard-desc">Infrastructure réseau complète en environnement simulé.</div>
+            <span class="pcard-link">Voir →</span>
+          </div>
+          <div class="pcard" onclick="window.location='sae2-03.html'">
+            <div class="pcard-period">1ère année BUT</div>
+            <div class="pcard-num">07</div>
+            <div class="pcard-title">SAE2.03 &mdash; VoIP</div>
+            <div class="pcard-desc">Téléphonie sur IP, configuration des équipements et tests d'appels.</div>
+            <span class="pcard-link">Voir →</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="per-but2" class="period-content">
+        <div class="empty-state">
+          <div class="empty-icon">&#9203;</div>
+          <div class="empty-title">Projets en cours</div>
+          <div class="empty-desc">Les projets de 2ème année seront ajoutés prochainement.</div>
+        </div>
+      </div>
+
+      <div id="per-but3" class="period-content">
+        <div class="empty-state">
+          <div class="empty-icon">&#128197;</div>
+          <div class="empty-title">À venir &mdash; 3ème année</div>
+          <div class="empty-desc">Les projets de 3ème année seront ajoutés l'année prochaine.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE — EXPÉRIENCES
+  ══════════════════════════════════════════ -->
+  <div id="page-experiences" class="page">
+    <div class="experiences-page">
+
+      <div class="page-header">
+        <p class="eyebrow">Parcours</p>
+        <h2>Expériences</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="xp-item">
+          <div class="xp-date">
+            <div class="xp-date-val">2026</div>
+            <div class="xp-date-dur">2 mois &middot; Stage</div>
+          </div>
+          <div class="xp-line">
+            <div class="xp-dot"></div>
+            <div class="xp-connector"></div>
+          </div>
+          <div class="xp-content">
+            <div class="xp-title">Stage Technicien Support</div>
+            <div class="xp-company">ATScom</div>
+            <div class="xp-body">
+              <ul>
+                <li>Support technique de premier niveau</li>
+                <li>Préparation et installation de matériel informatique et réseau</li>
+                <li>Aide au paramétrage d'équipements</li>
+                <li>Assistance sur des interventions techniques</li>
+                <li>Suivi des demandes et sensibilisation aux bonnes pratiques</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="xp-item">
+          <div class="xp-date">
+            <div class="xp-date-val">2023 &ndash; Présent</div>
+            <div class="xp-date-dur">Vacances scolaires</div>
+          </div>
+          <div class="xp-line">
+            <div class="xp-dot"></div>
+            <div class="xp-connector"></div>
+          </div>
+          <div class="xp-content">
+            <div class="xp-title">Co-hôte</div>
+            <div class="xp-company">Service Airbnb</div>
+            <div class="xp-body">
+              <ul>
+                <li>Entretien et réapprovisionnement des logements</li>
+                <li>Accueil personnalisé et satisfaction client</li>
+                <li>Gestion des réservations et communication voyageurs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="xp-item">
+          <div class="xp-date">
+            <div class="xp-date-val">Sept. 2022 &ndash; Présent</div>
+            <div class="xp-date-dur">Bénévolat</div>
+          </div>
+          <div class="xp-line">
+            <div class="xp-dot"></div>
+            <div class="xp-connector"></div>
+          </div>
+          <div class="xp-content">
+            <div class="xp-title">Bénévole</div>
+            <div class="xp-company">Association UCS (Unis-vert Culture et Sport)</div>
+            <div class="xp-body">
+              <ul>
+                <li>Tri et distribution de denrées alimentaires</li>
+                <li>Encadrement et sécurité d'événements culturels et sportifs</li>
+                <li>Préparation de repas solidaires</li>
+                <li>Coordination d'activités communautaires</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE — CONTACT
+  ══════════════════════════════════════════ -->
+  <div id="page-contact" class="page">
+    <div class="contact-page">
+
+      <div class="contact-left">
+        <p class="eyebrow">Restons en contact</p>
+        <h2>Me contacter</h2>
+        <p>
+          N'hésitez pas à me contacter pour toute opportunité de stage,
+          alternance ou collaboration. Je réponds dans les plus brefs délais.
+        </p>
+
+        <div class="contact-infos">
+          <div class="contact-info-row">
+            <div class="contact-icon">&#9993;&#65039;</div>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <div class="contact-info-val">
+                <a href="mailto:soumaya.rabah68@gmail.com">soumaya.rabah68@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-row">
+            <div class="contact-icon">&#128205;</div>
+            <div>
+              <div class="contact-info-label">Localisation</div>
+              <div class="contact-info-val">Colmar, France</div>
+            </div>
+          </div>
+          <div class="contact-info-row">
+            <div class="contact-icon">&#127891;</div>
+            <div>
+              <div class="contact-info-label">Formation</div>
+              <div class="contact-info-val">IUT de Colmar &mdash; BUT R&amp;T</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-row">
+          <a class="social-btn" href="https://www.linkedin.com/in/soumaya-r-651b92276" target="_blank">LinkedIn &#8594;</a>
+          <a class="social-btn" href="https://github.com/Soumaya68" target="_blank">GitHub &#8594;</a>
+          <a class="social-btn" href="https://www.indeed.com" target="_blank">Indeed &#8594;</a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <h3>Envoyer un message</h3>
+        <div id="form-feedback" class="form-feedback"></div>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" placeholder="Votre nom" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="votre@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" placeholder="Sujet du message" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Votre message..." required></textarea>
+          </div>
+          <button type="submit" class="btn-main" style="width:100%;">Envoyer &#8594;</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer>
+    <span class="foot-logo" onclick="showPage('accueil')">SR</span>
+    <div class="foot-links">
+      <a href="https://www.linkedin.com/in/soumaya-r-651b92276" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Soumaya68" target="_blank">GitHub</a>
+      <a onclick="showPage('contact')">Contact</a>
+    </div>
+    <span class="foot-copy">&copy; 2025 Soumaya RABAH</span>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════ -->
+  <script>
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      const page = document.getElementById('page-' + id);
+      const navEl = document.getElementById('nav-' + id);
+      if (page)  page.classList.add('active');
+      if (navEl) navEl.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showPeriod(id, btn) {
+      document.querySelectorAll('.period-content').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.ptab').forEach(b => b.classList.remove('active'));
+      const el = document.getElementById('per-' + id);
+      if (el)  el.classList.add('active');
+      if (btn) btn.classList.add('active');
+    }
+
+    document.getElementById('mobile-btn').addEventListener('click', function () {
+      const nav = document.getElementById('nav-links');
+      const isOpen = nav.classList.contains('mobile-open');
+      if (isOpen) {
+        nav.classList.remove('mobile-open');
+        nav.removeAttribute('style');
+      } else {
+        nav.classList.add('mobile-open');
+        Object.assign(nav.style, {
+          display: 'flex', flexDirection: 'column',
+          position: 'absolute', top: '54px', left: '0', right: '0',
+          background: 'var(--bg)', padding: '1.2rem 1.5rem',
+          borderBottom: '1px solid var(--bg3)', zIndex: '199', gap: '1rem'
+        });
+      }
+    });
+
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name    = document.getElementById('name').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const fb      = document.getElementById('form-feedback');
+
+      if (!name || !email || !subject || !message) {
+        fb.textContent = 'Veuillez remplir tous les champs.';
+        fb.className = 'form-feedback error';
+        return;
+      }
+
+      const body = encodeURIComponent('Nom : ' + name + '\nEmail : ' + email + '\n\n' + message);
+      window.location.href = 'mailto:soumaya.rabah68@gmail.com?subject='
+        + encodeURIComponent(subject) + '&body=' + body;
+
+      fb.textContent = "Votre client mail va s'ouvrir pour envoyer le message.";
+      fb.className = 'form-feedback success';
+    });
+  </script>
+
+</body>
+</html>
